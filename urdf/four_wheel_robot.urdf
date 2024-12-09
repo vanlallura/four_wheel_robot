@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="four_wheel_robot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.05 -1.3878E-17 0.030998"
+        rpy="0 0 0" />
+      <mass
+        value="0.45" />
+      <inertia
+        ixx="0.00039844"
+        ixy="-2.1178E-21"
+        ixz="2.9271E-20"
+        iyy="0.0012384"
+        iyz="-6.1069E-21"
+        izz="0.00159" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheel_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheel_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 -6.69415018209052E-11 6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00990169279271559" />
+      <inertia
+        ixx="8.65452858231311E-07"
+        ixy="1.33058737265187E-22"
+        ixz="1.76283275501757E-21"
+        iyy="1.5642085430632E-06"
+        iyz="-2.8847697276615E-22"
+        izz="8.65452858231313E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheel_robot/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheel_robot/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.1 0.055 0.018498"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="0 -6.69414940146495E-11 3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00990169279271557" />
+      <inertia
+        ixx="8.65452858231309E-07"
+        ixy="-2.01771669230345E-22"
+        ixz="5.16306307023527E-22"
+        iyy="1.56420854306319E-06"
+        iyz="2.20959927831126E-22"
+        izz="8.65452858231313E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheel_robot/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheel_robot/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0.1 -0.055 0.018498"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="back_left_wheel">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -6.69415061577139E-11 1.04083408558608E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00990169279271561" />
+      <inertia
+        ixx="8.65452858231315E-07"
+        ixy="-1.24441862790545E-21"
+        ixz="-1.72615387836835E-22"
+        iyy="1.5642085430632E-06"
+        iyz="-7.67656340440061E-22"
+        izz="8.65452858231314E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheel_robot/meshes/back_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheel_robot/meshes/back_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.055 0.018498"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left_wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="back_right_wheel">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 -6.69414940146495E-11 2.08166817117217E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00990169279271554" />
+      <inertia
+        ixx="8.65452858231308E-07"
+        ixy="-6.00695507355112E-22"
+        ixz="-2.43014597196212E-21"
+        iyy="1.56420854306319E-06"
+        iyz="-4.0698282296225E-22"
+        izz="8.65452858231311E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheel_robot/meshes/back_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheel_robot/meshes/back_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.055 0.018498"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>
